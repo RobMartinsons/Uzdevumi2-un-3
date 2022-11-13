@@ -1,0 +1,30 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        Random rnd = new Random() ;
+        int randomInt = rnd.nextInt(10);
+
+        int skaitlis;
+
+        System.out.println("Ir izvēlēts randomizēts skaitlis un tev ir tikai viena iespēja uzminēt (1-10)" ) ;//+ randomInt lai pārbaudītu ,kāds ir randomizēts skaitlis.
+
+        skaitlis = scan.nextInt();
+
+        if (skaitlis == randomInt) {
+
+            System.out.println("Apsveicu tu uzminēji skaitli!!");
+
+        } else if (skaitlis > rnd.nextInt()){
+
+            System.out.println("Skaitlis ir par lielu,mēģini no sākuma ar citu skaitli");
+        }
+        else {
+            System.out.println("Skaitlis ir par mazu,mēģini no sākuma ar citu skaitli");
+
+        }
+    }
+}
